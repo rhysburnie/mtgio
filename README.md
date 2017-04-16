@@ -231,7 +231,6 @@ The test commands can be watched by adding ` -- --watch`
 * `npm run lint`
   yo... use an eslint plugin in your IDE during development
 * `npm run build`
-   **runs automatically by postinstall**
 
 ---
 
