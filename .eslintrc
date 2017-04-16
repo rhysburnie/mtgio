@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "fetch": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:ava/recommended"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "ava"
+  ]
+}
