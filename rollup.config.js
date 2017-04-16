@@ -1,14 +1,17 @@
 import babel from 'rollup-plugin-babel';
+/* eslint-disable import/extensions */
 import babelrc from 'babelrc-rollup';
+/* eslint-enable import/extensions */
+
 const pkg = require('./package.json');
 
 const external = Object.keys(pkg.dependencies || {});
 
-const entry = 'src/index.js';
+const entry = 'src/mtgio.js';
 
 // my hacky fix to: https://github.com/eventualbuddha/babelrc-rollup/issues/6
 const rc = babelrc();
-const doesNotAcceptOptions = ['stage-2'];
+const doesNotAcceptOptions = ['stage-0'];
 const acceptsOptionModules = ['es2015'];
 rc.presets.forEach((preset, i) => {
   if (doesNotAcceptOptions.indexOf(preset[0]) > -1) {
