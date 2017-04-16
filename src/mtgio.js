@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
 import extractHeaderMeta from './utilities/extractHeaderMeta';
 import objectToURIParams from './utilities/objectToURIParams';
+import catchError from './utilities/catchError';
 
 const ROOT_URI = 'https://api.magicthegathering.io/v1';
 
@@ -10,8 +11,6 @@ export const getRootURI = () => ROOT_URI;
 export const utilities = {
   objectToURIParams,
 };
-
-const catchError = error => Promise.reject({ error });
 
 const RECOMMEND_GET_CARDS = `
 Use getCards({ id }) or getCards({ multiverseid }) instead:
