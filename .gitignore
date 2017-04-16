@@ -2,3 +2,6 @@ dist
 *.log
 node_modules
 .DS_Store
+
+# ignore the hello-world example from the starter-kit
+src/hello-world
