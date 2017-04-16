@@ -46,19 +46,19 @@ export function getCardsURI(options = {}) {
 
 export function getCards(options = {}) {
   return fetch(getCardsURI(options))
-  .catch(catchError)
-  .then(extractHeaderMeta)
-  .then((result) => {
-    if (result.card) {
-      // for consistency also return a `cards` Array
-      // when a by `id` / `multiverseid` serach made
-      /* eslint-disable no-param-reassign */
-      result.cards = [Object.assign({}, result.card)];
-      result.card.DEPRECATED = RECOMMEND_GET_CARDS;
-      /* eslint-enable no-param-reassign */
-    }
-    return result;
-  });
+    .catch(catchError)
+    .then(extractHeaderMeta)
+    .then((result) => {
+      if (result.card) {
+        // for consistency also return a `cards` Array
+        // when a by `id` / `multiverseid` serach made
+        /* eslint-disable no-param-reassign */
+        result.cards = [Object.assign({}, result.card)];
+        result.card.DEPRECATED = RECOMMEND_GET_CARDS;
+        /* eslint-enable no-param-reassign */
+      }
+      return result;
+    });
 }
 
 // NOTE this exists only to be consistent with the remote api.
@@ -73,14 +73,14 @@ export function getCard(id) {
     options.id = id; // just asume a hash here
   }
   return fetch(getCardsURI(options))
-  .catch(catchError)
-  .then(extractHeaderMeta)
-  .then((result) => {
-    /* eslint-disable no-param-reassign */
-    result.NOTE = RECOMMEND_GET_CARDS;
-    /* eslint-enable no-param-reassign */
-    return result;
-  });
+    .catch(catchError)
+    .then(extractHeaderMeta)
+    .then((result) => {
+      /* eslint-disable no-param-reassign */
+      result.NOTE = RECOMMEND_GET_CARDS;
+      /* eslint-enable no-param-reassign */
+      return result;
+    });
 }
 
 // ====
@@ -128,14 +128,14 @@ export function getSets(options = {}) {
 
 export function getSet(code) {
   return fetch(getSetsURI({ code }))
-  .catch(catchError)
-  .then(extractHeaderMeta)
-  .then((result) => {
-    /* eslint-disable no-param-reassign */
-    result.NOTE = RECOMMEND_GET_SETS;
-    /* eslint-enable no-param-reassign */
-    return result;
-  });
+    .catch(catchError)
+    .then(extractHeaderMeta)
+    .then((result) => {
+      /* eslint-disable no-param-reassign */
+      result.NOTE = RECOMMEND_GET_SETS;
+      /* eslint-enable no-param-reassign */
+      return result;
+    });
 }
 
 // =======
@@ -146,8 +146,8 @@ export const getBoosterURI = code => `${ROOT_URI}/sets/${code}/booster`;
 
 export function getBooster(code) {
   return fetch(getBoosterURI(code))
-  .catch(catchError)
-  .then(extractHeaderMeta);
+    .catch(catchError)
+    .then(extractHeaderMeta);
 }
 
 // =====

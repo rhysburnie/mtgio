@@ -44,7 +44,7 @@ All successful fetches will resolve a result object contain the following:
 
 
 
-### `getCards`
+### getCards
 
 `import { getCards } from 'mtgio'`;
 
@@ -94,7 +94,7 @@ if (result.meta.links.next) {
 
 **TODO** Later when I have a working app consuming this lib add an example
 
-### `getCard`
+### getCard
 
 `import { getCard } from 'mtgio'`
 
@@ -110,7 +110,7 @@ However it is less useful in JavaScript where you're better off always expecting
   * `getCard('aa74b7dc3b30b2e7559598f983543755e226811d')`
   * `getCard(4)`
 
-### `getSets`
+### getSets
 
 `import { getSets } from 'mtgio'`;
 
@@ -139,7 +139,7 @@ getSets({
 });
 ```
 
-### `getSet`
+### getSet
 
 `import { getSet } from 'mtgio'`
 
@@ -149,7 +149,7 @@ As with Cards you're better off using `getSets({ code })`.
 * not recommended
   * `getCard('RAV')`
 
-### `getBooster`
+### getBooster
 
 Generate a booster pack of cards for set
 
@@ -161,7 +161,7 @@ getBooster('LEA').then((result) => {
 });
 ```
 
-### `getTypes`
+### getTypes
 
 `import { getTypes } from 'mtgio'`
 
@@ -189,7 +189,7 @@ getTypes('subtypes').then((result) => {
 });
 ```
 
-### `getFormats`
+### getFormats
 
 ```
 import { getFormats } from 'mtgio';
