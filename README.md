@@ -24,24 +24,23 @@ All successful fetches will resolve a result object contain the following:
   that is useful is the pagination links which make it possible to paginate
   to and from the search result (the responses only contain 100 cards at a time)
 
-  **NOTE** the meta keys are camelcase rather than the strings [described](https://docs.magicthegathering.io/?javascript#headers)
+  **NOTE** the `meta` keys are camelcase rather than the strings [described](https://docs.magicthegathering.io/?javascript#headers)
 
-  * `'Link'` = `result.meta.links` (note **links** not link)
+  * 'Link' `result.meta.links` (note **links** not link)
     The string format returned will be parsed into easy to
     consume property / values:
     * `result.meta.links.next` (url string - if present)
     * `result.meta.links.prev` (url string - if present)
     * `result.meta.links.first` (url string - if present)
     * `result.meta.links.last` (url string - if present)
-  * `'Page-Size'` = `result.meta.pageSize`
-  * `'Count'` = `result.meta.count`
-  * `'Total-Count'` = `result.meta.totalCount`
-  * `'Ratelimit-Limit'` = `result.meta.ratelimitLimit`
-  * `'Ratelimit-Remaining'` = `result.meta.ratelimitRemaining`
+  * 'Page-Size' `result.meta.pageSize`
+  * 'Count' `result.meta.count`
+  * 'Total-Count' `result.meta.totalCount`
+  * 'Ratelimit-Limit' `result.meta.ratelimitLimit`
+  * 'Ratelimit-Remaining' `result.meta.ratelimitRemaining`
 
   **NOTE** if not present in the headers they will be `null`.
   You should always check their existence before usage.
-
 
 
 ### getCards
@@ -224,6 +223,8 @@ window.mtgio.getSets().then(function(result) {
 ## NPM Commands (in development of this api)
 
 The test commands can be watched by adding ` -- --watch`
+
+`npm ...` or `yarn ...`
 
 * `npm test` (optional watch flag)
 * `npm run test:remote` (optional watch flag)

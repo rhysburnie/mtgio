@@ -23,6 +23,14 @@ test('expected props exist on the `mtgio` export', (t) => {
   t.is(typeof getBooster, 'function');
   t.is(typeof getTypes, 'function');
   t.is(typeof getFormats, 'function');
+  t.is(typeof getBooster, 'function');
+  t.is(typeof getCard, 'function');
+  t.is(typeof getSet, 'function');
+  t.is(typeof getCardsURI, 'function');
+  t.is(typeof getSetsURI, 'function');
+  t.is(typeof getTypesURI, 'function');
+  t.is(typeof getFormatsURI, 'function');
+  t.is(typeof getBoosterURI, 'function');
 });
 
 // NOTE
