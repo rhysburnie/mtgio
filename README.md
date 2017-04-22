@@ -71,7 +71,7 @@ getCards({
 });
 ```
 
-Please not some combinations of parameters yield no results.
+Note: some combinations of parameters yield no results.
 This is the case of the endpoint not this library.
 
 **Pagination**
@@ -97,7 +97,7 @@ if (result.meta.links.next) {
 
 `import { getCard } from 'mtgio'`
 
-Get card is available, but I **recommend using getCards(id)** which will return
+Get card is available, but I **recommend using getCards({id})** which will return
 one item in the cards array.
 
 It is only included because the other language api's have that functionality.
