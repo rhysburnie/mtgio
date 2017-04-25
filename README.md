@@ -231,7 +231,11 @@ The test commands can be watched by adding ` -- --watch`
   tests the actual remote api endpoints
 * `npm run lint`
   yo... use an eslint plugin in your IDE during development
-* `npm run build`
+* `npm run build:dist`
+
+Note: had to use build:dist because when adding the repo as dependency it was running
+build and failing. TODO: later fix all that so dist folder not required and is built on
+install as per standard npm module.
 
 ---
 

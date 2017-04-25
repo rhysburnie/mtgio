@@ -38,7 +38,7 @@
     "test": "ava",
     "test:remote": "ava **/*.remoteTest.js",
     "lint": "eslint .",
-    "build": "rollup -c"
+    "build:dist": "rollup -c"
   },
   "ava": {
     "require": [
